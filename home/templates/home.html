@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border='2px' width='100%'>
+        <tr>
+        <th width='10%'>Request Type</th>
+        <th width='10%'>TO </th>
+        <th width='40%'>Path</th>
+        <th width='40%'>Format</th>
+        </tr>
+        <tr>
+            <td>Post request</td>
+            <td>Register</td>
+            <td>http://127.0.0.1:8000/api/register/</td>
+            <td>{
+                "username": "Harshsahu",
+                "first_name":"harsh",
+                "last_name":"sahu",
+                "email":"harrshsahu709@gmail.com",
+                "password": "123"
+        }</td>
+        </tr>
+        <tr>
+            <td>    Post request</td>
+            <td>Login</td>
+            <td>simple login:{http://127.0.0.1:8000/api/login1/} <br>
+                JWT login:{http://127.0.0.1:8000/api/login2/}
+            </td>
+            <td>{
+                "username": "Harshsahu",
+                "password": "123"
+            }</td>
+        </tr>
+        <tr>
+            <td>Get Request</td>
+            <td>To get all posts: of logined user</td>
+            <td>{http://127.0.0.1:8000/home/blog/}</td>
+        </tr>
+        <tr>
+            <td>Patch Request</td>
+            <td>TO update post: need to send uuid of specific post</td>
+            <td>{http://127.0.0.1:8000/home/blog/{uuid/}}</td>
+            <td>{
+                "title":"latest news"       // or anything want to update
+            }</td>
+        </tr>
+        <tr>
+            <td>Delete Request</td>
+            <td> To delete specific post: send uuid</td>
+            <td>{http://127.0.0.1:8000/home/blog/{uuid/}}</td>
+        </tr>
+    </table>
+
+
+    <p>Send User register Post request to this Api {http://127.0.0.1:8000/api/register/}<br> <br>
+        <strong>{
+        "username": "Harshsahu",
+        "first_name":"harsh",
+        "last_name":"sahu",
+        "email":"harrshsahu709@gmail.com",
+        "password": "123"
+}</strong> <br>
+
+Use this Format to send data.</p>
+
+<br>
+
+<span><p>Use this Api to send Login Post request <b>{http://127.0.0.1:8000/api/login1/} for simple login</b> <br>
+    {http://127.0.0.1:8000/api/login2/} for JWT login.
+     <br>
+
+    send data in this format
+    <b>{
+        "username": "Harshsahu",
+        "password": "123"
+    }</b>
+
+</p></span>
+
+<br>
+<p>To post data on blog {http://127.0.0.1:8000/home/blog/} <br>
+    to perform all opertaions CRUD using single link {http://127.0.0.1:8000/home/blog/BlogApi/} <br>
+
+    <br>
+    To update the existing post send patch request to  {http://127.0.0.1:8000/home/blog/{uuid/}} <br>
+    <br>
+    TO delete the post send delete request to {http://127.0.0.1:8000/home/blog/{uuid/}} <br>
+</p>
+</body>
+</html>
+
+
